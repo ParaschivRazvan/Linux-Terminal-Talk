@@ -1,18 +1,3 @@
-/*
-(30 puncte) Talk bazat doar pe semnale: un acelasi program este lansat de
-la 2 terminale diferite de acelasi utilizator,obtinand 2 procese diferite.
-Fiecare proces citeste de la tastatura PID-ul celuilalt. Fiecare proces
-are un tabel care asociaza cate un semnal != SIGKILL, SIGCONT, SIGSTOP
-celor 26 litere, blank-ului si capului de linie. Fiecare proces citeste
-intr-un ciclu cate o linie de la tastatura, apoi o parcurge si trimite
-celuilalt proces semnalul asociat fiecarui caracter din ea (inclusiv
-blank-urile si capul de linie). De asemenea, fiecare proces, la primirea
-unui asemenea semnal, va afla caracterul corespunzator si-l va scrie pe
-ecran. Se va asigura protectia la pierderea unor semnale si se va
-asigura ca semnalele trimise de un proces sa fie primite de celalalt in
-aceeasi ordine (de exemplu un proces nu va emite semnalul corespunzator
-unui caracter decat daca a primit confirmarea ca celalalt proces a
-tratat semnalul pentru caracterul precedent).*/
 #include <stdio.h>
 #include <sys/types.h>
 #include <signal.h>
